@@ -1,0 +1,5 @@
+rodada,modo,conv_inicial_s,rotas_r1,rotas_total,ctrl_pkts,ctrl_bytes,ctrl_Bps,ctrl_medicao_pkts,rtt_ms,jitter_ms,rota_h1_h3,outage_s,perdidos,reacao_watch_s
+1,ospf,51.8,15,71,42,3672,61.2,0,60.323,0.104,R1>R3>h3,0.111,1,
+1,ospf,51.8,13,69,28,2448,61.2,0,60.36,0.096,R1>R3>h3,0.06,0,
+1,rip,2.4,11,55,7,1424,35.6,0,60.34,0.07,R1>R3>h3,17.562,343,
+1,proprio,0.2,8,37,0,0,0.0,120,20.453,0.219,R1>R2>R3>h3,0.877,16,0.04

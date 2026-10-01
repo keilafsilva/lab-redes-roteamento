@@ -1,0 +1,51 @@
+---
+h1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.6
+h2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.8
+h3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.2
+h4:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.9
+h5:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5
+r1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+r2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.7
+r3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.10
+r4:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+r5:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.11

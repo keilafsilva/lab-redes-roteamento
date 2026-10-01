@@ -1,0 +1,111 @@
+name: lab-fso
+
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: lab-fso-router:latest
+      binds:
+        - configs/r1/daemons:/etc/frr/daemons
+        - configs/r1/active.conf:/etc/frr/frr.conf
+      exec:
+        - ip addr add 10.0.12.1/30 dev eth1
+        - ip addr add 10.0.51.2/30 dev eth2
+        - ip addr add 10.0.13.1/30 dev eth3
+        - ip addr add 192.168.1.1/24 dev eth4
+
+    r2:
+      kind: linux
+      image: lab-fso-router:latest
+      binds:
+        - configs/r2/daemons:/etc/frr/daemons
+        - configs/r2/active.conf:/etc/frr/frr.conf
+      exec:
+        - ip addr add 10.0.12.2/30 dev eth1
+        - ip addr add 10.0.23.1/30 dev eth2
+        - ip addr add 192.168.2.1/24 dev eth3
+
+    r3:
+      kind: linux
+      image: lab-fso-router:latest
+      binds:
+        - configs/r3/daemons:/etc/frr/daemons
+        - configs/r3/active.conf:/etc/frr/frr.conf
+      exec:
+        - ip addr add 10.0.23.2/30 dev eth1
+        - ip addr add 10.0.34.1/30 dev eth2
+        - ip addr add 10.0.13.2/30 dev eth3
+        - ip addr add 192.168.3.1/24 dev eth4
+
+    r4:
+      kind: linux
+      image: lab-fso-router:latest
+      binds:
+        - configs/r4/daemons:/etc/frr/daemons
+        - configs/r4/active.conf:/etc/frr/frr.conf
+      exec:
+        - ip addr add 10.0.34.2/30 dev eth1
+        - ip addr add 10.0.45.1/30 dev eth2
+        - ip addr add 192.168.4.1/24 dev eth3
+
+    r5:
+      kind: linux
+      image: lab-fso-router:latest
+      binds:
+        - configs/r5/daemons:/etc/frr/daemons
+        - configs/r5/active.conf:/etc/frr/frr.conf
+      exec:
+        - ip addr add 10.0.45.2/30 dev eth1
+        - ip addr add 10.0.51.1/30 dev eth2
+        - ip addr add 192.168.5.1/24 dev eth3
+
+    h1:
+      kind: linux
+      image: lab-fso-host:latest
+      exec:
+        - ip addr add 192.168.1.10/24 dev eth1
+        - ip route replace default via 192.168.1.1 dev eth1
+
+    h2:
+      kind: linux
+      image: lab-fso-host:latest
+      exec:
+        - ip addr add 192.168.2.10/24 dev eth1
+        - ip route replace default via 192.168.2.1 dev eth1
+
+    h3:
+      kind: linux
+      image: lab-fso-host:latest
+      exec:
+        - ip addr add 192.168.3.10/24 dev eth1
+        - ip route replace default via 192.168.3.1 dev eth1
+
+    h4:
+      kind: linux
+      image: lab-fso-host:latest
+      exec:
+        - ip addr add 192.168.4.10/24 dev eth1
+        - ip route replace default via 192.168.4.1 dev eth1
+
+    h5:
+      kind: linux
+      image: lab-fso-host:latest
+      exec:
+        - ip addr add 192.168.5.10/24 dev eth1
+        - ip route replace default via 192.168.5.1 dev eth1
+
+  links:
+    # anel principal
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r2:eth2", "r3:eth1"]
+    - endpoints: ["r3:eth2", "r4:eth1"]
+    - endpoints: ["r4:eth2", "r5:eth1"]
+    - endpoints: ["r5:eth2", "r1:eth2"]
+    # diagonal (caminho alternativo r1 <-> r3)
+    - endpoints: ["r1:eth3", "r3:eth3"]
+    # redes de acesso (hosts)
+    - endpoints: ["r1:eth4", "h1:eth1"]
+    - endpoints: ["r2:eth3", "h2:eth1"]
+    - endpoints: ["r3:eth4", "h3:eth1"]
+    - endpoints: ["r4:eth3", "h4:eth1"]
+    - endpoints: ["r5:eth3", "h5:eth1"]

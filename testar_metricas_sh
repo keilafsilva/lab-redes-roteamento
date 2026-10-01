@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# testar_metricas.sh — Executa testes de RTT e Traceroute entre hosts
+#
+
+set -euo pipefail
+
+ORIGEM="${1:-h1}"
+DESTINO_NUM="${2:-4}"
+DESTINO_IP="192.168.${DESTINO_NUM}.10"
+
+echo "================================================="
+echo " Testando conectividade e desempenho: $ORIGEM -> h$DESTINO_NUM ($DESTINO_IP)"
+echo "================================================="
+
+echo -e "\n--- [1/3] Teste de RTT e Perda de Pacotes (20 pings) ---"
+docker exec "clab-lab-fso-$ORIGEM" ping -c 20 -i 0.2 "$DESTINO_IP" | tail -n 2
+
+echo -e "\n--- [2/3] Traceroute (Mapeamento de Saltos) ---"
+docker exec "clab-lab-fso-$ORIGEM" traceroute -n "$DESTINO_IP"
+
+echo -e "\n--- [3/3] Matriz de Conectividade Geral ---"
+python3 algoritmo_proprio.py --testar

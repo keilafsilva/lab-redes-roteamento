@@ -1,0 +1,509 @@
+{
+  "name": "lab-fso",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-d797b9a046d3",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "h1": {
+      "index": "0",
+      "shortname": "h1",
+      "longname": "clab-lab-fso-h1",
+      "fqdn": "h1.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h1",
+      "kind": "linux",
+      "image": "lab-fso-host:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h1",
+        "clab-node-longname": "clab-lab-fso-h1",
+        "clab-node-name": "h1",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h2": {
+      "index": "1",
+      "shortname": "h2",
+      "longname": "clab-lab-fso-h2",
+      "fqdn": "h2.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h2",
+      "kind": "linux",
+      "image": "lab-fso-host:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h2",
+        "clab-node-longname": "clab-lab-fso-h2",
+        "clab-node-name": "h2",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h3": {
+      "index": "2",
+      "shortname": "h3",
+      "longname": "clab-lab-fso-h3",
+      "fqdn": "h3.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h3",
+      "kind": "linux",
+      "image": "lab-fso-host:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h3",
+        "clab-node-longname": "clab-lab-fso-h3",
+        "clab-node-name": "h3",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h4": {
+      "index": "3",
+      "shortname": "h4",
+      "longname": "clab-lab-fso-h4",
+      "fqdn": "h4.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h4",
+      "kind": "linux",
+      "image": "lab-fso-host:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h4",
+        "clab-node-longname": "clab-lab-fso-h4",
+        "clab-node-name": "h4",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "h5": {
+      "index": "4",
+      "shortname": "h5",
+      "longname": "clab-lab-fso-h5",
+      "fqdn": "h5.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h5",
+      "kind": "linux",
+      "image": "lab-fso-host:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/h5",
+        "clab-node-longname": "clab-lab-fso-h5",
+        "clab-node-name": "h5",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r1": {
+      "index": "5",
+      "shortname": "r1",
+      "longname": "clab-lab-fso-r1",
+      "fqdn": "r1.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r1",
+      "kind": "linux",
+      "image": "lab-fso-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r1",
+        "clab-node-longname": "clab-lab-fso-r1",
+        "clab-node-name": "r1",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r2": {
+      "index": "6",
+      "shortname": "r2",
+      "longname": "clab-lab-fso-r2",
+      "fqdn": "r2.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r2",
+      "kind": "linux",
+      "image": "lab-fso-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r2",
+        "clab-node-longname": "clab-lab-fso-r2",
+        "clab-node-name": "r2",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r3": {
+      "index": "7",
+      "shortname": "r3",
+      "longname": "clab-lab-fso-r3",
+      "fqdn": "r3.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r3",
+      "kind": "linux",
+      "image": "lab-fso-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r3",
+        "clab-node-longname": "clab-lab-fso-r3",
+        "clab-node-name": "r3",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r4": {
+      "index": "8",
+      "shortname": "r4",
+      "longname": "clab-lab-fso-r4",
+      "fqdn": "r4.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r4",
+      "kind": "linux",
+      "image": "lab-fso-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r4",
+        "clab-node-longname": "clab-lab-fso-r4",
+        "clab-node-name": "r4",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r5": {
+      "index": "9",
+      "shortname": "r5",
+      "longname": "clab-lab-fso-r5",
+      "fqdn": "r5.lab-fso.io",
+      "group": "",
+      "labdir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r5",
+      "kind": "linux",
+      "image": "lab-fso-router:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d797b9a046d3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/keila/Área de trabalho/lab-fso/clab-lab-fso/r5",
+        "clab-node-longname": "clab-lab-fso-r5",
+        "clab-node-name": "r5",
+        "clab-node-type": "",
+        "clab-owner": "keila",
+        "clab-topo-file": "/home/keila/Área de trabalho/lab-fso/topo.clab.yml",
+        "containerlab": "lab-fso"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "r1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:83:0b:ec",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:6e:21:b4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:75:45:74",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r3",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:8f:f3:9b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r3",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:94:28:1a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r4",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:25:4b:8a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r4",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:3c:82:c6",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r5",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ec:6d:48",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r5",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:c8:fc:62",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:87:37:a4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r1",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:18:9d:d3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r3",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:6c:2d:ca",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r1",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:96:24:99",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:e8:48:52",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r2",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:4b:86:b0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:21:c5:8e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r3",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:4e:e5:a7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h3",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:0a:5d:e5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r4",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:b3:76:33",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h4",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:31:35:f2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r5",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:26:a1:6c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h5",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:52:e5:85",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
